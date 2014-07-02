@@ -1,5 +1,6 @@
 snippet #!
 	#!/usr/bin/env python
+	# -*- coding: utf-8 -*-
 snippet imp
 	import ${0:module}
 snippet uni
@@ -198,8 +199,14 @@ snippet epydoc
 
 	@raise e: ${0: Description}
 	"""
-
 snippet p
 	print(${0})
 snippet log
 	log.${0:debug}(${1})
+snippet dol
+	def ${1:__init__}(self, *args, **kwargs):
+	    super(${0:ClassName}, self).$1(*args, **kwargs)
+snippet kwg
+	self.${1:var_name} = kwargs.get('$1', ${2:None})
+snippet lkwg
+	${1:var_name} = kwargs.get('$1', ${2:None})
